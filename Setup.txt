@@ -1,0 +1,88 @@
+Practical 00: Set up the environment
+
+We will need to set up our development environment before we start the practicals.  The instructions that are contained here are intended to be brief - we will be going through this again in the first workshop.  The instructions have been written for a Windows environment, but similar steps would be applicable for a Mac or Linux environment.
+
+We will be using three key applications for our development this semester: Google Chrome, Visual Studio Code, and XAMPP.
+
+1.Download and install Google Chrome 
+
+
+2.Download and install XAMPP
+
+
+    1.Just need to select MySQL and phpMyAdmin - by default PHP should be selected.
+    2.Install XAMPP at the default location (c:\xampp).
+    3.Start the XAMPP Control Panel once it has finished installing.
+    4.Start the Apache Module and the MySQL module to ensure no errors.
+
+3.Download and install Visual Studio Code
+    1.Install using default settings.
+    2.Open Visual Studio Code.
+
+4.Web development strongly benefits from a consistent and clean directory (folder) structure.  Now we are going to set up our development folder structure.
+
+    1.Throughout the semester you will be creating a folder structure that looks like the following:
+        www
+            prac-1
+                checkpoint-1
+                checkpoint-2
+                ...
+            prac-2
+                checkpoint-1
+                checkpoint-2
+                ...
+            prac-3
+                checkpoint-1
+                checkpoint-2
+                ...
+            TLDR
+                any required folders and files
+    2.In Visual Studio Code click on the Open Folder option.
+    3.Navigate to where you have installed XAMPP (c:\xampp by default)
+    4.Navigate to the htdocs folder in your xampp folder.
+    5.Create a new folder called www, then click Select Folder.
+    6.Create a new folder in www and name it prac-1.
+    7.Create a new folder in prac-1 and name it checkpoint-1.
+
+5.Now we will fix an association between VS Code and XAMPP before installing some extensions to make our development process easier. 
+
+    1.In VS Code in your checkpoint-1 directory create a new file called index.php.
+    2.An error will appear saying it cannot validate since a PHP installation could not be found.
+    3.Click the blue Open Settings button.
+    4.Click the Edit in settings.json link that appears
+    5.In the "php.validate.executablePath": property add the location of your XAMPP php install, by default: "C:/xampp/php/php.exe"
+    6.Close the settings tabs and return to the index.php page - the error should have disappeared.
+    7.We can remove the index.php file now.
+    8.For Practical 01 we need some files to get us started.  We will use one of these files now to finalise the setup of our environment.
+    9.Add the me.html file to your prac-1/checkpoint-1 folder.
+
+6.Now we will add some extensions to VS Code.
+
+    1.Click on the Extensions button.
+    2.Search for "php intelephense" **note the incorrect spelling is correct**, then click Install.
+    3.Search for "live server", then click Install.
+    4.Search for "php server", then click install.
+
+7.Our last step is to hook all this in with Google Chrome to allow for efficient development.
+
+    1.Open Google Chrome and with your XAMPP server running, go to the web address: localhost.  This will bring up your XAMPP dashboard.
+    2.We want to show our web page though so we should change the web address to: localhost/www/prac-1/checkpoint-1/me.html.  This will load our starting page.
+    3.In VS Code open the me.html file and edit the second TODO task and replace the section with the topic code (COMP2030).
+    4.Save your file and reload the Chrome page, you should now see the topic code on the page with the other content.
+    5.Rather than having to refresh the page on Chrome every time we make a change, we will use an extension that will handle this for us.
+    6.Open Settings in Chrome, i.e., click the three vertical dots to the right of the URL bar, click Settings in the menu.
+    7.In the sidebar that opens click on Extensions (toward the bottom of the list).
+    8.Click on the Extensions hamburger menu, then at the bottom of the page click on the Open Chrome Web Store.
+    9.Search for Live Server, and click Add to Chrome.
+    10.Click on the Extension button and select Live Server Web Extension.
+    11.Switch the Live Reload toggle to on.
+    12.The Actual Server Address should be set to http://localhost/www/
+    13.The Live Server Address can be located by going back to VS Code and clicking the option at the bottom of the screen that says "Go Live".
+    14.This will load a new page with a web address that is an IP address, e.g., http://192.168.0.100:5500/, copy the address from the URL bar and paste it into the Live Server Address.
+    15.Hit Apply.
+    16.You may need to restart Chrome.
+    17.Navigate to your me.html page in Chrome.
+    18.Now add the topic name to me.html.
+    19.Save your changes and you should then see the page automatically updates with the changes.
+
+8.You are now set up and ready to complete the first Practical.

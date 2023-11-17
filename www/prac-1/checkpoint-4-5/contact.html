@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles/style.css" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Lucas McVey" />
+    <meta name="description" content="Practical 1" />
+    <title>Contact us</title>
+  </head>
+  <body class="bg-element">
+    <div class="content">
+      <h1>Contact us</h1>
+      <h2>Fill out the following form to get in touch.</h2>
+      <form action="/submit" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Required" />
+
+        <label for="phone">Phone number</label>
+        <input type="tel" name="phone" id="phone" />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Required" />
+
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" />
+
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          rows="5"
+          placeholder="Required"
+        ></textarea>
+
+        <div class="submit-button">
+          <input type="submit" value="Submit" />
+        </div>
+
+        <p class="privacy-policy">
+          By contacting us, you agree to your information being collected and
+          used in accordance with our
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
